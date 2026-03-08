@@ -72,6 +72,22 @@ runs:
               .filter(file => file.status === 'added' || file.status === 'modified' || file.status === 'renamed')
               .map(file => file.filename);
 
+          } else if ((eventTypes.includes('schedule') && context.eventName === 'schedule') ||
+                     (eventTypes.includes('workflow_dispatch') && context.eventName === 'workflow_dispatch')) {
+            console.log(`Getting all files for ${context.eventName} event`);
+
+            // For schedule/workflow_dispatch, return all files in the repo matching the filter
+            const { data: tree } = await github.rest.git.getTree({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tree_sha: context.sha,
+              recursive: '1'
+            });
+
+            changedFiles = tree.tree
+              .filter(item => item.type === 'blob')
+              .map(item => item.path);
+
           } else {
             core.setFailed(`Unsupported event type: ${context.eventName}. Supported types: ${eventTypes.join(', ')}`);
             return;
