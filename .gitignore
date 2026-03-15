@@ -124,3 +124,7 @@ tmp/*
 
 # Ignore CTRF report files
 crtf/*
+
+# MPP contacts data file — may contain personal information; exclude from public repos
+scripts/MentorProtege/MPP-Contacts.xlsx
+scripts/MentorProtege/MPP-Contacts-Export-*.xlsx
