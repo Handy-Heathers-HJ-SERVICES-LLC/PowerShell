@@ -12,7 +12,7 @@ If you believe you have found a security vulnerability in any Microsoft-owned re
 
 Instead, please report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://aka.ms/security.md/msrc/create-report).
 
-You should receive a response within 24 hours. Additional information can be found at [microsoft.com/msrc](https://www.microsoft.com/msrc). 
+You should receive a response within 24 hours. Additional information can be found at microsoft.com/msrc. 
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
@@ -26,7 +26,7 @@ Please include the requested information listed below (as much as you can provid
 
 This information will help us triage your report more quickly.
 
-If you are reporting for a bug bounty, more complete reports can contribute to a higher bounty award. Please visit our [Microsoft Bug Bounty Program](https://aka.ms/security.md/msrc/bounty) page for more details about our active programs.
+If you are reporting for a bug bounty, more complete reports can contribute to a higher bounty award. Please visit our Microsoft Bug Bounty Program page for more details about our active programs.
 
 ## Preferred Languages
 
